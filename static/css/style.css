@@ -1,0 +1,58 @@
+body{
+    flex: auto;
+    /* background-color: teal; */
+    background-color: azure;
+}
+
+h1{
+    font-family: sans-serif;
+    font-style: oblique;
+    background-color: rgb(145, 43, 217);
+}
+
+#top_header{
+    text-align: center;
+    text-decoration-color: black;
+    text-size-adjust: 20;
+    background-color: orange;
+}
+
+/* main footer */
+#main_footer{
+    text-align: center;
+    background-color: azure;
+    color: #1F4597;
+}
+
+#output{
+    /* background-color: white; */
+    background-color: lightcyan;
+    border-width: 2px;
+}
+
+#out_text{
+    background-color: #2ceb4c;
+    text-align: center;
+    border-style: none;
+    border-width: 1px;
+
+}
+
+#upload_image_div{
+    background-color: #488BC7;
+    text-align: center;
+    /* color: white; */
+    border-style: groove;
+    border-width: 2px;
+}
+
+#lang_shorts{
+    text-align: center;
+    background-color: #488BC7;
+    border-width: 2px;
+}
+
+table, th, td{
+    border: 1px solid black;
+    text-align: center;
+}

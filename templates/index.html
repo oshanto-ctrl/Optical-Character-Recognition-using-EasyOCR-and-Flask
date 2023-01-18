@@ -1,0 +1,102 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+
+    <div id="langs_shorts" align="center">
+        <table>
+            <tr>
+                <th>Language</th>
+                <th>Initial for OCR</th>
+            </tr>
+            <tr>
+                <td>Bengali</td> <!--Lang-->
+                <td>bn</td> <!--Init lang OCR-->
+            </tr>
+            <tr>
+                <td>English</td> <!--Lang-->
+                <td>en</td> <!--Init lang OCR-->
+            </tr>
+            <tr>
+                <td>Arabic</td> <!--Lang-->
+                <td>ar</td> <!--Init lang OCR-->
+            </tr>
+            <tr>
+                <td>Urdu</td> <!--Lang-->
+                <td>ur</td> <!--Init lang OCR-->
+            </tr>
+            <tr>
+                <td>Chinese (simplified)</td> <!--Lang-->
+                <td>ch_sim</td> <!--Init lang OCR-->
+            </tr>
+            <tr>
+                <td>German</td> <!--Lang-->
+                <td>de</td> <!--Init lang OCR-->
+            </tr>
+            <tr>
+                <td>Russian</td> <!--Lang-->
+                <td>ru</td> <!--Init lang OCR-->
+            </tr>
+            <tr>
+                <td>Spanish</td> <!--Lang-->
+                <td>es</td> <!--Init lang OCR-->
+            </tr>
+            <tr>
+                <td>Persian (Farsi)</td> <!--Lang-->
+                <td>fa</td> <!--Init lang OCR-->
+            </tr>
+            <tr>
+                <td>Japanese</td> <!--Lang-->
+                <td>ja</td> <!--Init lang OCR-->
+            </tr>
+            <tr>
+                <td>Korean</td> <!--Lang-->
+                <td>ko</td> <!--Init lang OCR-->
+            </tr>
+            <tr>
+                <td>Turkish</td> <!--Lang-->
+                <td>tr</td> <!--Init lang OCR-->
+            </tr>
+        </table>
+    </div>
+
+    <div align="center">
+        <br><br><br>
+        <H2>Enter the selected two languages</H2>
+    
+
+        <form method="POST">
+            <label for="l1">Language #1:</label>
+            <input type="text" id="l1" name="l1"><br><br>
+
+            <label  for="l2">Language #2:</label>
+            <input type="text" id="l2" name="l2"><br><br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+    <div align="center" id="output">
+        <h2>Selected Language 1 = {{ l1 }}   and   Language 2 = {{ l2 }}</h2>
+        <h3 >
+            <h4 id="out_text">Character Recogniton Output:</h2>
+            <center>
+                <p>{{ result }}</p>
+            </center>
+        </h3>
+        
+    </div>
+{% endblock %} 
+
+
+
+
+
+
+
+

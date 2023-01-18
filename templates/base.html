@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+        <!-- <script type="text/javascript" src="{{ url_for('static', filename='script/script.js') }}"></script> -->    
+        {% if title %} 
+            <title>{{title}}</title>
+        {% else %}
+            <title>OCR</title>
+        {% endif %}
+
+        <!--Header-->
+        <header id="top_header">
+            <!--Research Topic Name-->
+            <h3>Optical Character Recognition From Image</h3>
+        </header>
+    </head>
+
+    <body>
+        {% block content %} 
+        
+        {% endblock %}
+
+
+
+        
+        <!--footer-->
+        <br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <footer id="main_footer"> <p> &copy; no_success </p></footer>
+       </body>
+</html>
