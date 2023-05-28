@@ -1,10 +1,11 @@
-from flask import *
+#importing necessary libraries
+from flask import * # bad practice (import only necessaries)
 from werkzeug.utils import secure_filename
 import os
 import easyocr
 import urllib.request
 
-
+# Flask app instance
 app = Flask(__name__)
 
 
@@ -17,7 +18,7 @@ app.config['MAX_CONTENT_PATH'] = 16 * 1024 * 1024
 ALLOWED_EXTENSIONS = set(['jpg', 'jpeg', 'png'])
 languageFormData = {}
 
-
+# Index page
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == "POST":
@@ -33,7 +34,7 @@ def index():
 
 pic = {}
 
-# upload image function
+# Function for uploading images
 @app.route('/upload_image', methods=['POST', 'GET'])
 def upload_image():
     if request.method == "POST":
@@ -43,7 +44,7 @@ def upload_image():
         # f.save(secure_filename(f.filename))
 
         print(filename)
-        pic['x'] = f # XXXXXXXXTRYINGXXXXXX
+        pic['x'] = f 
         print("PIC UPLOADED.")
 
         
@@ -60,10 +61,6 @@ def upload_image():
         for r in results:
             text += r[1]
         print(text)
-
-
-
-
 
 
         return render_template('index.html', l1=languageFormData['l1'], l2=languageFormData['l2'], result=text)
@@ -91,7 +88,7 @@ def success():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) # Discard debug=True at production.
 
 
 
