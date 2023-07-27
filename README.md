@@ -6,7 +6,7 @@
 * [Introduction](#introduction)
 * [Technologies](#technologies)
 * [Project Folder Structure](#project-folder-structure)
-* [Walkthrough](#walthrough)
+* [Walkthrough](#walkthrough)
 * [Output](#output)
 * [Evaluation](#evaluation)
 
